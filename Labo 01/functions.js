@@ -24,23 +24,6 @@ function showPersonsList() {
 
 Person.prototype.show = function () {
 
-    //
-    //        if (window.event.shiftKey) {
-    //            // $("#list-person").append(this.firstName + " " + this.lastName + " (" + this.sex + ")");
-    //            var iDiv = document.createElement('div');
-    //            if (this.sex === "Male") {
-    //                iDiv.className = "alert alert-info";
-    //            } else {
-    //                iDiv.className = "alert alert-danger";
-    //            }
-    //            document.getElementsByTagName("list-person")[0].appendChild(iDiv);
-    //        } else {
-    //    
-    //            $("#person").html("Hello " + this.firstName + " " + this.lastName + " (" + this.sex + ") !");
-    //    
-    //        }
-
-
     if (window.event.shiftKey) {
         $("#person").removeAttr("id");
         $("#list-person").append('<li class="list-group-item list-group-item-info" id="person"></li>');
@@ -80,4 +63,11 @@ $(function () {
         p.show();
 
     });
+    $.getJSON("rooms.json", function (data) {
+        var rooms = data.rooms;
+        $.each(rooms, function (i, item) {
+            $("#rooms").append("<div>Room: " + rooms[i].name + ", " + rooms[i].capacity + "<br></div>");
+        });
+    });
+
 });

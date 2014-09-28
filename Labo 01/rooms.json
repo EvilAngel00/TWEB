@@ -1,0 +1,8 @@
+{"rooms": [
+	{"name": "A38",
+	 "capacity": 50},
+	{"name": "B22",
+	 "capacity": 40},
+	{"name": "C18",
+	 "capacity": 200}
+]}
