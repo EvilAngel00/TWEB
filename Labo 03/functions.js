@@ -1,7 +1,7 @@
 console.log("bonjour");
 
 function githubSearch() {
-    var textField = document.getElementById('search').value;
+    var textField = document.getElementById('search-field').value;
 
     console.log(textField);
 }
