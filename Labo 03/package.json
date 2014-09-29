@@ -1,0 +1,9 @@
+{
+  "name": "Labo03TWEB",
+  "description": "Labo 03 TWEB Rui Reis / Frédéric Saam",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.9.5"
+  }
+}
